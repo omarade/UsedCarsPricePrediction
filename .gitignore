@@ -1,5 +1,11 @@
 .ipynb_checkpoints
 env
 data
+models
 handling_outliers.ipynb
 ref
+df_2010_filtered.csv
+df_cleaned.csv
+df_dropped_empty_outliers.csv
+df_filled_empty_outliers.csv
+df_filled_empty_outliers_dyn.csv
