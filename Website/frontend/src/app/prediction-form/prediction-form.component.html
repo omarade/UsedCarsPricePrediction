@@ -1,0 +1,36 @@
+<div id="container">
+    <h1 id="heading">Car Price Estimator</h1>
+    <form (ngSubmit)="onSubmit(predictionForm)" #predictionForm="ngForm" id="prediction-form">
+        <mat-form-field appearance="fill">
+            <mat-label>Year</mat-label>
+            <input matInput type="text" id="year" name="year" ngModel required>
+        </mat-form-field>
+        
+        <mat-form-field appearance="fill">
+            <mat-label>Manufacturer</mat-label>
+            <input matInput type="text" id="manufacturer" name="manufacturer" ngModel required>
+        </mat-form-field>
+        
+        <mat-form-field appearance="fill">
+            <mat-label>Odometer</mat-label>
+            <input matInput type="number" id="odometer" name="odometer" ngModel required>
+        </mat-form-field>
+        
+        <mat-form-field appearance="fill">
+            <mat-label>Transmission</mat-label>
+            <input matInput type="text" id="transmission" name="transmission" ngModel required>
+        </mat-form-field>
+        
+        <mat-form-field appearance="fill">
+            <mat-label>Size</mat-label>
+            <input matInput type="text" id="size" name="size" ngModel required>
+        </mat-form-field>
+        <button mat-flat-button type="submit" [disabled]="!predictionForm.valid"  id="btn">Submit</button>
+    </form>
+      
+    <div *ngIf="prediction" id="prediction">
+        <h3>Price estimate</h3>
+        <h2>${{ prediction }}</h2>
+    </div>
+      
+</div>
